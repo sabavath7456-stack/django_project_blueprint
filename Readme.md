@@ -1,10 +1,14 @@
-# Backend
-Framework
-- Django
-  language
-  - Python3
-#Frontend
-Template
--HTML.file
+# DJANGO PROJECT BLUEPRINT
+
+## Backend
+- Framework: Django
+- Language: Python 3
+
+## Frontend
+- Templates: HTML File
+- Static:
 - CSS
-- JS
+-  JS
+
+## Database
+- SQLite3
