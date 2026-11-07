@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #0f0f0f;
+        }
+
+        /* Top Header Navbar */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 56px;
+            padding: 0 16px;
+            background-color: #ffffff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .logo-area {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ff0000;
+            letter-spacing: -1px;
+        }
+
+        .search-area {
+            display: flex;
+            align-items: center;
+            width: 40%;
+        }
+
+        .search-area input {
+            width: 100%;
+            padding: 8px 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 20px 0 0 20px;
+            outline: none;
+        }
+
+        .search-area button {
+            padding: 8px 20px;
+            background-color: #f8f8f8;
+            border: 1px solid #ccc;
+            border-left: none;
+            border-radius: 0 20px 20px 0;
+            cursor: pointer;
+        }
+
+        .user-profile {
+            font-size: 14px;
+            font-weight: 600;
+            background-color: #065fd4;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 18px;
+        }
+
+        /* Main Layout Wrapper */
+        .main-container {
+            display: flex;
+            margin-top: 56px; /* clears fixed header */
+        }
+
+        /* Sidebar */
+        aside {
+            width: 240px;
+            height: calc(100vh - 56px);
+            background-color: #ffffff;
+            position: fixed;
+            padding: 12px;
+            overflow-y: auto;
+        }
+
+        aside a {
+            display: block;
+            padding: 10px 16px;
+            color: #0f0f0f;
+            text-decoration: none;
+            border-radius: 10px;
+            margin-bottom: 4px;
+            font-size: 14px;
+        }
+
+        aside a:hover {
+            background-color: #f2f2f2;
+        }
+
+        /* Video Content Grid */
+        content {
+            margin-left: 240px;
+            padding: 24px;
+            width: calc(100% - 240px);
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 16px;
+        }
+
+        .video-card {
+            background-color: transparent;
+            cursor: pointer;
+        }
+
+        .thumbnail {
+            width: 100%;
+            height: 160px;
+            background-color: #e0e0e0;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+
+        .video-info {
+            display: flex;
+            margin-top: 12px;
+        }
+
+        .channel-icon {
+            width: 36px;
+            height: 36px;
+            background-color: #ccc;
+            border-radius: 50%;
+            margin-right: 12px;
+        }
+
+        .video-details h3 {
+            font-size: 15px;
+            font-weight: 500;
+            color: #0f0f0f;
+            line-height: 20px;
+            margin-bottom: 4px;
+        }
+
+        .video-details p {
+            font-size: 13px;
+            color: #606060;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="logo-area">YouTube</div>
+        <div class="search-area">
+            <input type="text" placeholder="Search">
+            <button>🔍</button>
+        </div>
+        <div class="user-profile">Sign In</div>
+    </header>
+
+    <div class="main-container">
+        <!-- Sidebar Navigation -->
+        <aside>
+            <a href="#">🏠 Home</a>
+            <a href="#">🩳 Shorts</a>
+            <a href="#">📺 Subscriptions</a>
+            <hr style="border:0; border-top:1px solid #e5e5e5; margin:12px 0;">
+            <a href="#">📚 Library</a>
+            <a href="#">🕒 History</a>
+            <a href="#">▶️ Your Videos</a>
+        </aside>
+
+        <!-- Video Grid Feed -->
+        <content>
+            <!-- Video Item 1 -->
+            <div class="video-card">
+                <div class="thumbnail"></div>
+                <div class="video-info">
+                    <div class="channel-icon"></div>
+                    <div class="video-details">
+                        <h3>Build a Full Stack Web Application from Scratch</h3>
+                        <p>Tech Academy • 12K views • 2 days ago</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Item 2 -->
+            <div class="video-card">
+                <div class="thumbnail"></div>
+                <div class="video-info">
+                    <div class="channel-icon"></div>
+                    <div class="video-details">
+                        <h3>Learn HTML, CSS & Flexbox in 20 Minutes</h3>
+                        <p>Code Master • 45K views • 1 week ago</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Item 3 -->
+            <div class="video-card">
+                <div class="thumbnail"></div>
+                <div class="video-info">
+                    <div class="channel-icon"></div>
+                    <div class="video-details">
+                        <h3>Django Backend Tutorial for Beginners</h3>
+                        <p>Python Devs • 8.5K views • 5 days ago</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Item 4 -->
+            <div class="video-card">
+                <div class="thumbnail"></div>
+                <div class="video-info">
+                    <div class="channel-icon"></div>
+                    <div class="video-details">
+                        <h3>Top 10 Tips to Master VS Code Faster</h3>
+                        <p>Developer Life • 98K views • 3 weeks ago</p>
+                    </div>
+                </div>
+            </div>
+        </content>
+    </div>
+
+</body>
+</html>
