@@ -9,6 +9,7 @@
 - Static:
 - CSS
 -  JS
+-  Images
 
 ## Database
 - SQLite3
